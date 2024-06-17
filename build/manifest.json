@@ -1,0 +1,22 @@
+{
+  "name": "Create React App Sample",
+  "description":"open your go to tabs in one click",
+  "version":"1.0",
+  "manifest_version":3,
+  "permissions": ["tabs", "activeTab", "scripting"],
+  "action":{
+    "default_title":"My Apps",
+    "default_popup":"index.html",
+    "default_icon":{
+      "16":"logo192.png",
+      "128":"logo192.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+ 
+}
